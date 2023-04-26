@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="play">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wycenyRemontowe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="count">
+      <span class="addresult"></span>
+      <span id="wallW">łączna długość ścian:</span>
+      <input type="number" id="lenght" />
+      <span id="wallH">Wysokość ścian</span>
+      <input type="number" id="height" />
+      <span id="result"></span>
+      <span id="windoww">Szerokość okna</span>
+      <input type="number" id="windowwidth" />
+      <span id="windowh">Wysokość okna</span>
+      <input type="number" id="windowheight" />
+      <span id="bathroomWidth">Szerokość łazienki</span>
+      <input type="number" id="bathWidth" />
+
+      <span id="bathroomLenght">Długość łazienki</span>
+      <input type="number" id="bathLenght" />
+      <button id="add3">zatwierdź</button>
+      <span id="WindowResult"></span>
+      <p>powierzchnia okna to <span id="windowfinal"></span>m2</p>
+
+      <p>powierzchnia ścian to <span id="wallfinal"></span>m2</p>
+
+      <p>powierzchnia podłogi to <span id="BathFloorResult"></span>m2</p>
+    </section>
+
+    <section class="prices">
+      <div class="pricesDiv">
+        <p>wybierz etapy remontu:</p>
+      </div>
+      <div class="bathroom">
+        <ul>
+          <li>
+            Skuwanie płytek
+            <label for="accept">
+              <input
+                type="checkbox"
+                id="tilescrush"
+                name="accept"
+                value="yes"
+              />
+            </label>
+            <span id="tilescrushspan"> pln</span>
+          </li>
+
+          <li>
+            Tynkowanie
+            <label for="accept">
+              <input
+                type="checkbox"
+                id="plaster"
+                name="accept"
+                value="yes"
+              /> </label
+            ><span id="plasterspan"> pln</span>
+          </li>
+
+          <li>
+            Gruntowanie
+            <label for="accept">
+              <input
+                type="checkbox"
+                id="ground"
+                name="accept"
+                value="yes"
+              /> </label
+            ><span id="groundspan"> pln</span>
+          </li>
+
+          <li>
+            Płytki
+            <label for="accept">
+              <input
+                type="checkbox"
+                id="Tiles"
+                name="accept"
+                value="yes"
+              /> </label
+            ><span id="tilespan"> pln</span>
+          </li>
+
+          <li>
+            Sufit podwieszany
+            <label for="accept">
+              <input type="checkbox" id="ceiling" name="accept" value="yes" />
+            </label>
+          </li>
+
+          <li>
+            Punkty elektryczne
+            <label for="accept">
+              <input
+                type="checkbox"
+                id="electricity"
+                name="accept"
+                value="yes"
+              />
+            </label>
+          </li>
+
+          <li>
+            Punkty Hydrauliczne
+            <label for="accept">
+              <input
+                type="checkbox"
+                id="hydraulics"
+                name="accept"
+                value="yes"
+              />
+            </label>
+          </li>
+
+          <li>
+            Wanna
+            <label for="accept">
+              <input type="checkbox" id="bath" name="accept" value="yes" />
+            </label>
+          </li>
+
+          <li>
+            Brodzik
+            <label for="accept">
+              <input type="checkbox" id="pool" name="accept" value="yes" />
+            </label>
+          </li>
+
+          <li>
+            Geberit
+            <label for="accept">
+              <input type="checkbox" id="framesite" name="accept" value="yes" />
+            </label>
+          </li>
+
+          <li>
+            Sedes
+            <label for="accept">
+              <input type="checkbox" id="site" name="accept" value="yes" />
+            </label>
+          </li>
+
+          <li>
+            Lustro
+            <label for="accept">
+              <input type="checkbox" id="mirror" name="accept" value="yes" />
+            </label>
+          </li>
+        </ul>
+      </div>
+      <button id="add4">zatwierdź</button>
+    </section>
+    <script src="wycenyRemontowe.js"></script>
+  </body>
+</html>
