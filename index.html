@@ -8,34 +8,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="welcome">
+      <h1>Kalkulator remontowy</h1>
+      <h2>1. Łazienka</h2>
+    </div>
     <section class="count">
-      <span class="addresult"></span>
-      <span id="wallW">łączna długość ścian:</span>
-      <input type="number" id="lenght" />
-      <span id="wallH">Wysokość ścian</span>
-      <input type="number" id="height" />
-      <span id="result"></span>
-      <span id="windoww">Szerokość okna</span>
-      <input type="number" id="windowwidth" />
-      <span id="windowh">Wysokość okna</span>
-      <input type="number" id="windowheight" />
-      <span id="bathroomWidth">Szerokość łazienki</span>
-      <input type="number" id="bathWidth" />
+     
+      <span id="wallW">Łączna długość ścian:       <input type="number" id="lenght" /></span>
+      <span id="wallH">Wysokość ścian       <input type="number" id="height" /></span>
+      <span id="windoww">Szerokość okna   <input type="number" id="windowwidth" /></span>
+      
+      <span id="windowh">Wysokość okna    <input type="number" id="windowheight" /></span>
+     
+      <span id="bathroomWidth">Szerokość łazienki   <input type="number" id="bathWidth" /></span>
+      
 
-      <span id="bathroomLenght">Długość łazienki</span>
-      <input type="number" id="bathLenght" />
-      <button id="add3">zatwierdź</button>
-      <span id="WindowResult"></span>
-      <p>powierzchnia okna to <span id="windowfinal"></span>m2</p>
+      <span id="bathroomLenght">Długość łazienki   <input type="number" id="bathLenght" /></span>
+   
+      <button id="add3">Zatwierdź</button>
+<div class="wrap">
+      <p>Powierzchnia okna to <span id="windowfinal"></span> m2</p>
 
-      <p>powierzchnia ścian to <span id="wallfinal"></span>m2</p>
+      <p>Powierzchnia ścian to <span id="wallfinal"></span>m2</p>
 
-      <p>powierzchnia podłogi to <span id="BathFloorResult"></span>m2</p>
+      <p>Powierzchnia podłogi to <span id="BathFloorResult"></span>m2</p>
+    </div>
     </section>
 
     <section class="prices">
       <div class="pricesDiv">
-        <p>wybierz etapy remontu:</p>
+        <p>Wybierz etapy remontu:</p>
       </div>
       <div class="bathroom">
         <ul>
@@ -91,59 +93,58 @@
           <li>
             Sufit podwieszany
             <label for="accept">
-              <input type="checkbox" id="ceiling" name="accept" value="yes" />
-            </label>
-          </li>
-
-          <li>
-            Punkty elektryczne
-            <label for="accept">
               <input
                 type="checkbox"
-                id="electricity"
+                id="ceiling"
                 name="accept"
                 value="yes"
-              />
-            </label>
+              /> </label
+            ><span id="ceilingspan"> pln</span>
           </li>
 
-          <li>
-            Punkty Hydrauliczne
-            <label for="accept">
-              <input
-                type="checkbox"
-                id="hydraulics"
-                name="accept"
-                value="yes"
-              />
-            </label>
-          </li>
+            
 
           <li>
             Wanna
             <label for="accept">
-              <input type="checkbox" id="bath" name="accept" value="yes" />
-            </label>
+              <input
+                type="checkbox"
+                id="bath"
+                name="accept"
+                value="yes"
+              /> </label
+            ><span id="bathgspan"> pln</span>
           </li>
 
           <li>
             Brodzik
             <label for="accept">
-              <input type="checkbox" id="pool" name="accept" value="yes" />
-            </label>
+              <input
+                type="checkbox"
+                id="pool"
+                name="accept"
+                value="yes"
+              /> </label
+            ><span id="poolspan"> pln</span>
           </li>
 
           <li>
-            Geberit
+            Stelaż
             <label for="accept">
               <input type="checkbox" id="framesite" name="accept" value="yes" />
+              <span id="Framespan"> pln</span>
             </label>
           </li>
 
           <li>
-            Sedes
+            Miska ustępowa
             <label for="accept">
-              <input type="checkbox" id="site" name="accept" value="yes" />
+              <input
+                type="checkbox"
+                id="Toilet"
+                name="accept"
+                value="yes"
+              /><span id="Wcspan"> pln</span>
             </label>
           </li>
 
@@ -155,7 +156,35 @@
           </li>
         </ul>
       </div>
-      <button id="add4">zatwierdź</button>
+
+
+  <div class="points">
+    <h1>Podaj liczbę punktów</h1>
+
+      <p>Punkty elektryczne</p>
+            <label for="number">
+              <input
+                type="number"
+                id="electricity"
+              />
+            </label><span id="electricspan"> </span>
+          
+
+        
+            <p>Punkty hydrauliczne</p>
+            <label for="number"">
+              <input
+                type="number"
+                id="hydraulics"
+          
+              />
+            </label><span id="hydraulicspan"> </span>
+          </li>
+          <button id="add4">zatwierdź</button>
+        
+          <p id="finalCost">Całkowity koszt</p><span id="Tcost"></span>
+        </div>
+    
     </section>
     <script src="wycenyRemontowe.js"></script>
   </body>
