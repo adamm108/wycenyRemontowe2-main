@@ -14,7 +14,7 @@ const windowFinal = document.getElementById('windowfinal')
 const wallFinal = document.getElementById('wallfinal')
 const bathroomWidth = document.getElementById('bathWidth')
 const bathroomLenght = document.getElementById('bathLenght')
-
+const points = document.getElementById('points')
 add3.addEventListener('click', () => {
 
     let lenghtValue = lenght.value;
@@ -22,7 +22,6 @@ add3.addEventListener('click', () => {
     let bathWidth = bathroomWidth.value;
     let bathLenght = bathroomLenght.value;
     let wallResult = parseFloat(lenghtValue) * parseFloat(heightValue);
-    result.textContent = wallResult;
     console.log(wallResult);
     let windowWidth = windowW.value;
     let windowHeight = windowH.value;
@@ -48,6 +47,7 @@ add3.addEventListener('click', () => {
             site = 150,
             mirror = 100
         ]
+        var totalcost= 0
         const tilescrush = document.getElementById('tilescrush');
         if(tilescrush.checked){
             console.log("Cena za skuwanie płytek to: " ) 
@@ -56,7 +56,7 @@ add3.addEventListener('click', () => {
             const tileCrushValue = dataBase[0] * tileCrushTotal
             const tilescrushspan = document.getElementById("tilescrushspan")
             tilescrushspan.innerText = tileCrushValue
-    
+    totalcost = totalcost + tileCrushValue
         }
         else{
             console.log("false")
@@ -67,7 +67,7 @@ add3.addEventListener('click', () => {
             const plasterTotal = dataBase[1] * wallFinalValue;
             const plasterspan = document.getElementById("plasterspan")
             plasterspan.innerText = plasterTotal
-        
+            totalcost = totalcost + plasterTotal
     
         }
         else{
@@ -81,6 +81,7 @@ add3.addEventListener('click', () => {
             const groundTotalValue = dataBase[2] * groundTotal
             const groundspan = document.getElementById("groundspan")
             groundspan.innerText = groundTotalValue;
+            totalcost = totalcost + groundTotalValue
         
     
         }
@@ -94,14 +95,104 @@ add3.addEventListener('click', () => {
             const tilesTotalValue = dataBase[3] * tilesTotal
             const tilespan = document.getElementById("tilespan")
             tilespan.innerText = tilesTotalValue;
+            totalcost = totalcost + tilesTotalValue
         
     
         }
         else{
             console.log("false")
         }
-    });
+        const Ceiling = document.getElementById('ceiling');
+        if(Ceiling.checked){
+            console.log("cena za sufit to: " ) 
+            const ceilingTotal =  parseFloat( BathFloorResultTotal);
+            const ceilingTotalValue = dataBase[4] * ceilingTotal
+            const ceilingspan = document.getElementById("ceilingspan")
+            ceilingspan.innerText = ceilingTotalValue;
+            totalcost = totalcost + ceilingTotalValue
+        
+    
+        }
+        const Bath = document.getElementById('bath');
+        if(Bath.checked){
+            console.log("Cena za wannę   to: " ) 
+            const bathTotalValue = dataBase[7] ;
+            const bathspan = document.getElementById("bathgspan")
+            bathspan.innerText = bathTotalValue;
+            totalcost = totalcost + bathTotalValue
+        
+    
+        }
+        const Pool = document.getElementById('pool');
+        if(Pool.checked){
+            console.log("Cena za brodzik   to: " ) 
+            const poolTotalValue = dataBase[8] ;
+            const bathspan = document.getElementById("poolspan")
+            bathspan.innerText = poolTotalValue;
+            totalcost = totalcost + poolTotalValue
+        
+    
+        }
+        else{
+            console.log("false")
+        }
+        const Frame = document.getElementById('framesite');
+        if(Frame.checked){
+            console.log("Cena za  stelaż : " ) 
+            const FrameTotal = dataBase[9] ;
+            const Framespan = document.getElementById("Framespan")
+            Framespan.innerText = FrameTotal
+            totalcost = totalcost + FrameTotal
+        
+    
+        }
+        else{
+            console.log("false")
+        }
+        const Toilet = document.getElementById('Toilet');
+        if(Toilet.checked){
+            console.log("Cena za  miskę : " ) 
+            const toiletotal = dataBase[10] ;
+            const toiletspan = document.getElementById("Wcspan")
+            toiletspan.innerText = toiletotal
+            totalcost = totalcost + toiletotal
+        
+    
+        }
+        else{
+            console.log("false")
+        }
+        
+
+    const electric = document.getElementById('electricity');
+    const electricvalue = electric.value;
+    if(electricvalue > 0){
+        console.log("Punkty elektryczne") 
+        const electrictotal = parseFloat(dataBase[5] * electricvalue) ;
+        const electricspan = document.getElementById("electricspan")
+        electricspan.innerText = electrictotal
+        totalcost = totalcost + electrictotal
+        console.log(electrictotal)
+}
+const hydraulic = document.getElementById('hydraulics');
+const hydraulicvalue = hydraulic.value;
+if(hydraulicvalue > 0){
+    console.log("Punkty hydrauliczne") 
+    const hydraulictotal = parseFloat(dataBase[6] * hydraulicvalue) ;
+    const hydraulicspan = document.getElementById("hydraulicspan")
+    hydraulicspan.innerText = hydraulictotal
+    totalcost = totalcost + hydraulictotal
+    console.log(hydraulictotal)
+}
+
+    const finalcost= document.getElementById("finalCost") 
+        const Tcost =document.getElementById("Tcost")
+        Tcost.innerText = totalcost
+        console.log(totalcost)
+
   
-});
+});}
+
+)
 
 
